@@ -34,8 +34,28 @@ print("""
   
 #2
 yolkm=input("ne kadar mesafe gittiginizi km cinsinden yaziniz:")
-print("mesafe mil olarak hesaplaniyor")
+print("mesafe mil olarak hesaplaniyor...")
 mil=int(yolkm)*1.609
 print("hesaplama islemi tamamlandi")
 print("yapmis oldugunuz {} km yol {} mil yapar...".format(yolkm,mil))
+
+
+#3
+ad=input("isminizi giriniz:")
+soyad=input("soyadiniz giriniz:")
+vize=input("vize notunuzu giriniz:")
+final=input("final notunuzu giriniz:")
+ders=input("kac derse katildiginizi giriniz:")
+derspuan=int(ders)*5
+print("hesaplama yapiliyor...")
+puan=(int(vize)*(3/10))+(int(final)*(1/2))+(int(derspuan)*(1/5))
+print("hesaplama tamamlandi")
+print("{} {} isimli ogrencinin not ortalamasi:{}".format(ad,soyad,puan))
+dosya=open("ogrenciNotHesaplama.txt","w")
+print("adi:",ad," ",soyad,"\n","vize:",vize,"\n","final:",final,"\n","ders puani:",derspuan,
+      "\n",
+      "not ortalamasi:",puan,file=dosya,sep="")
+dosya.close()
+print("bilgiler dosyaya kaydedildi.")
+
 
