@@ -1,1 +1,41 @@
-asd
+#1
+kelime=input("lutfen isminizi girin:")
+print("""
+                        **
+                      **  **
+                    **      **
+                  **          **
+                **              **
+              **                  **
+            **                      **
+          **                          **
+        **                              **
+      **                                  **
+    **                                      **
+  **********************************************
+  """)
+print("                     ",kelime,"                       ")
+print("                     ","_"*len(kelime),"                       ")
+print("""
+  **********************************************
+    **                                      **
+      **                                  **
+        **                              **
+          **                          **
+            **                      **
+              **                  **
+                **              **
+                  **          **
+                    **      **
+                      **  **
+                        **
+  """)
+  
+  
+#2
+yolkm=input("ne kadar mesafe gittiginizi km cinsinden yaziniz:")
+print("mesafe mil olarak hesaplaniyor")
+mil=int(yolkm)*1.609
+print("hesaplama islemi tamamlandi")
+print("yapmis oldugunuz {} km yol {} mil yapar...".format(yolkm,mil))
+
