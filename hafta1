@@ -60,7 +60,7 @@ print("bilgiler dosyaya kaydedildi.")
 
 
 #4
-t("anaparayi giriniz(euro):")
+para=input("anaparayi giriniz(euro):")
 sure=input("faiz suresini yil olarak giriniz:")
 oran=input("faiz oranini giriniz(%):")
 print("faiz orani hesaplaniyor...")
