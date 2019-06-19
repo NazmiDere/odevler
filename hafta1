@@ -59,3 +59,24 @@ dosya.close()
 print("bilgiler dosyaya kaydedildi.")
 
 
+#4
+t("anaparayi giriniz(euro):")
+sure=input("faiz suresini yil olarak giriniz:")
+oran=input("faiz oranini giriniz(%):")
+print("faiz orani hesaplaniyor...")
+hyillik=(int(para)*int(sure)*float(oran))/100
+haylik=hyillik/(12*int(sure))
+hgunluk=haylik/30
+htoplam=hyillik+int(para)
+print("anaparasi {} euro olan {} yillik %{} faiz oranli paranin:\nyillik faizi:".format(para,sure,oran),
+      hyillik,"\n","aylik faizi:",haylik,"\n","gunluk faizi:",hgunluk,"\n",
+      "toplami:",htoplam,sep="")
+print("dosyaya kaydediliyor...")
+dosya=open("faizHesaplama.txt","w")
+print("anapara:(euro)",para,"\n","faiz suresi(yil):",sure,"\n","faiz orani(%):",oran,"\n","yillik faiz:",
+      hyillik,"\n","aylik faiz:",haylik,"\n","gunluk faiz:",hgunluk,sep="",file=dosya)
+dosya.close()
+print("kayit tamamlandi.")
+
+
+
