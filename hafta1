@@ -79,4 +79,24 @@ dosya.close()
 print("kayit tamamlandi.")
 
 
+#5
+gelir=input("aylik gelirinizi giriniz:")
+hmutfak=input("aylik mutfak harcamanizi giriniz:")
+hegitim=input("aylik egitim harcamanizi giriniz:")
+hgiyim=input("aylik giyim harcamanizi giriniz:")
+hulasim=input("aylik ulasim harcamanizi giriniz:")
+htoplam=int(hmutfak)+int(hegitim)+int(hgiyim)+int(hulasim)
+oran=htoplam/int(gelir)
+print("hesaplama yapiliyor...")
+print("aylik toplam masrafiniz {} euro ve aylik masrafinizin toplam gelirinize orani {}"
+      .format(htoplam,oran))
+print("bilgileriniz dosyaya kaydedlilyor...")
+file=open("aylikmasraf.txt","w")
+print("aylik masraf:",htoplam,"\n","masraf orani:",oran,file=file,sep="")
+file.close()
 
+
+#6
+print("Python’un kurucusu Guido Van Rossum, Hollanda’nin Amsterdam’daki  \"Universiteit Van Amsterdam\" okulundan  1982’de mezun olmuştur.")
+print('Python’un kurucusu Guido Van Rossum, Hollanda’nin Amsterdam’daki  "Universiteit Van Amsterdam" okulundan  1982’de mezun olmuştur.')
+print("""Python’un kurucusu Guido Van Rossum, Hollanda’nin Amsterdam’daki  "Universiteit Van Amsterdam" okulundan  1982’de mezun olmuştur.""")
