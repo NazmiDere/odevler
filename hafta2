@@ -1,1 +1,49 @@
+#1
+#########################
+print("="*15,"BURC TESPIT SISTEMI","="*15,sep="")
+while True:
+    ay=input("dogdugunuz ayi giriniz:")
+    gun=int(input("dogdugunuz gunu giriniz:"))
+    print("burcunuz belirleniyor...")
+    if(ay=="mart" and 21<=gun<=31)or(ay=="nisan" and 1<=gun<=20):
+        print("koc burcusunuz")
+        break
+    elif(ay=="nisan" and 21<=gun<=30)or(ay=="mayis" and 1<=gun<=20):
+        print("boga burcusunuz")
+        break
+    elif(ay=="mayis" and 21<=gun<=31)or(ay=="haziran" and 1<=gun<=21):
+        print("ikizler burcusunuz")
+        break
+    elif(ay=="haziran" and 22<=gun<=30)or(ay=="temmuz" and 1<=gun<=22):
+        print("yengec burcusunuz")
+        break
+    elif(ay=="temmuz" and 23<=gun<=31)or(ay=="agustos"and 1<=gun<=22):
+        print("aslan burcusunuz")
+        break
+    elif(ay=="agustos"and 23<=gun<=31)or (ay=="eylul"and 1<=gun<=22):
+        print("basak burcusunuz")
+        break
+    elif (ay=="eylul" and 23<=gun<=30)or (ay=="ekim"and 1<=gun<=23):
+        print("terazi burcusunuz")
+        break
+    elif (ay=="ekim"and 24<=gun<=31)or (ay=="kasim"and 1<=gun<=22):
+        print("akrep burcusunuz")
+        break
+    elif (ay=="kasim"and 23<=gun<=30)or (ay=="aralik"and 1<=gun<=21):
+        print("yay burcusunuz")
+        break
+    elif (ay=="aralik"and 22<=gun<=31)or (ay=="ocak"and 1<=gun<=20):
+        print("oglak burcusunuz")
+        break
+    elif (ay=="ocak"and 21<=gun<=30)or (ay=="subat"and 1<=gun<=18):
+        print("kova burcusunuz")
+        break
+    elif (ay=="subat"and 19<=gun<=20)or(ay=="mart"and 1<=gun<=20):
+        print("balik burcusunuz")
+        break
+    else:
+        print("yanlis giris yaptiniz,tekrak deneyiniz")
+        
+        
+
 
