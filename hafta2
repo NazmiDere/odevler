@@ -45,7 +45,32 @@ while True:
         print("yanlis giris yaptiniz,tekrak deneyiniz")
 
 
-#3
+#2
+#########################
+while True:
+    donusum=input("hangi donusumu yapmak istediginizi yaziniz\n(km-mil,mil-km)(cikamk icin q ya basiniz):")
+    if donusum=="q":
+        soru=input("cikmak istediginize emin misiniz(e/h):")
+        if soru=="e":
+            break
+        elif soru=="h":
+            continue
+    elif donusum=="mil-km":
+        birim=float(input("donusturmek istediginiz birimin uzunlugunu yaziniz:"))
+        sonuc=birim*1.609
+        print(birim,"mil",round(sonuc,2),"km yapar")
+        break
+    elif donusum=="km-mil":
+        birim=float(input("donusturmek istediginiz birimin uzunlugunu yaziniz:"))
+        sonuc=birim/1.609
+        print(birim,"km",round(sonuc,2),"mil yapar")
+        break
+    else:
+        print("yanlis giris yaptiniz lutfen tekrar deneyiniz")
+        print("*********************************************")
+
+
+#4
 #########################
 deneme=1
 sayi=5
