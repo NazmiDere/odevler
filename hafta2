@@ -48,8 +48,8 @@ while True:
 #3
 #########################
 deneme=1
+sayi=5
 while True:
-    sayi=5
     tahmin=int(input("sayiyi tahmin ediniz(0-10):"))
     if tahmin!=sayi:
         print("tekrar deneyiniz")
