@@ -43,7 +43,30 @@ while True:
         break
     else:
         print("yanlis giris yaptiniz,tekrak deneyiniz")
-        
-        
+
+
+#3
+#########################
+deneme=1
+while True:
+    sayi=5
+    tahmin=int(input("sayiyi tahmin ediniz(0-10):"))
+    if tahmin!=sayi:
+        print("tekrar deneyiniz")
+        deneme+=1
+    elif deneme>5:
+        print("sayiyi dogru tahmin ettiniz ancak basarisiz oldunuz")
+        break
+    else:
+        print("dogru tahmin ettiniz")
+        if deneme==1:
+            print("3 yildiz kazandiniz")
+            break
+        elif deneme==2 or deneme==3:
+            print("2 yildiz kazandiniz")
+            break
+        elif deneme==4 or deneme==5:
+            print("1 yildiz kazandiniz")
+            break      
 
 
