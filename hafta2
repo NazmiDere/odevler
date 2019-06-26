@@ -122,10 +122,8 @@ while True:
 #########################
 hesap=1000
 while True:
-    islem=input("hangi islemi yapmak istediginizi giriniz\n(bakiye kontrol,para yatirma,para cekme)(cikamak icin q ya basiniz):")
-    if islem=="q":
-        break
-    elif islem=="para yatirma":
+    islem=input("hangi islemi yapmak istediginizi giriniz\n(bakiye kontrol,para yatirma,para cekme):")
+    if islem=="para yatirma":
         yatirma=float(input("yatirmak istediginiz miktari giriniz:"))
         hesap=hesap+yatirma
         print("hesabinizda",hesap,"euro olmustur")
@@ -148,8 +146,16 @@ while True:
             break
     elif islem=="bakiye kontrol":
         print("hesabinizda",hesap,"euro vardir")
+        soru=input("baska bir islem yapmak ister misiniz(e/h):")
+        if soru=="e":
+            continue
+        elif soru =="h":
+            break
     else:
         print("yanlis islem,tekrar deneyiniz")
+    
+    
+
     
     
 
