@@ -70,6 +70,29 @@ while True:
         print("*********************************************")
 
 
+#3
+#########################
+while True:
+    kullanici=input("bir kullanici adi olusturun\n(3-18 karakterden olusmalidir ve buyuk harf bulunmamalidir):")
+    sifre=input("bir sifre olusturun(6-12 karakterden olusmalidir:")
+    rakamlar="0123456789"
+    if len(kullanici)<3 or len(kullanici)>18:
+        print("3-18 karakter arasi bir kullanici adi olusturmalisiniz")
+    if len(sifre)<6 or len(sifre)>12:
+        print("6-12 karakter arasi bir sifre olusturmalisiniz")
+    for i in kullanici:
+        if i in rakamlar:
+            print("kullanici adinda rakam bulunamaz")
+            break
+    else:
+        print("*"*30,"\n",kullanici," kullanici adi ve ",sifre," sifresi basariyla olusturuldu",sep="")
+        break
+dosya=open("bilgiler.txt","w")
+print("kullanici adi\t:",kullanici,"\n","sifre\t\t:",sifre,file=dosya,sep="")
+dosya.close()
+print("bilgileriniz dosyaya kaydedildi")
+
+
 #4
 #########################
 deneme=1
