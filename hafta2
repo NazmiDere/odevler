@@ -115,6 +115,43 @@ while True:
             break
         elif deneme==4 or deneme==5:
             print("1 yildiz kazandiniz")
-            break      
+            break
+
+
+#5
+#########################
+hesap=1000
+while True:
+    islem=input("hangi islemi yapmak istediginizi giriniz\n(bakiye kontrol,para yatirma,para cekme)(cikamak icin q ya basiniz):")
+    if islem=="q":
+        break
+    elif islem=="para yatirma":
+        yatirma=float(input("yatirmak istediginiz miktari giriniz:"))
+        hesap=hesap+yatirma
+        print("hesabinizda",hesap,"euro olmustur")
+        soru=input("baska bir islem yapmak ister misiniz(e/h):")
+        if soru=="e":
+            continue
+        elif soru =="h":
+            break
+    elif islem=="para cekme":
+        cekme=float(input("cekmek istediginiz miktari giriniz:"))
+        hesap=hesap-cekme
+        if hesap<0:
+            print("hesabinizdaki parayi eksiye dusuremezsiniz")
+        else:
+            print("hesabinizda",hesap,"euro kalmistir")
+        soru=input("baska bir islem yapmak ister misiniz(e/h):")
+        if soru=="e":
+            continue
+        elif soru =="h":
+            break
+    elif islem=="bakiye kontrol":
+        print("hesabinizda",hesap,"euro vardir")
+    else:
+        print("yanlis islem,tekrar deneyiniz")
+    
+    
+
 
 
