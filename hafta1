@@ -1,4 +1,4 @@
-#1
+#1 DESENLI YAZI
 kelime=input("lutfen isminizi girin:")
 print("""
                         **
@@ -32,7 +32,7 @@ print("""
   """)
   
   
-#2
+#2 KM YI MILE CEVIRME
 yolkm=input("ne kadar mesafe gittiginizi km cinsinden yaziniz:")
 print("mesafe mil olarak hesaplaniyor...")
 mil=float(yolkm)*1.609
@@ -40,7 +40,7 @@ print("hesaplama islemi tamamlandi")
 print("yapmis oldugunuz {} km yol {} mil yapar...".format(yolkm,mil))
 
 
-#3
+#3 NOT ORTALAMA HESAPLAMA
 ad=input("isminizi giriniz:")
 soyad=input("soyadiniz giriniz:")
 vize=input("vize notunuzu giriniz:")
@@ -59,7 +59,7 @@ dosya.close()
 print("bilgiler dosyaya kaydedildi.")
 
 
-#4
+#4 FAIZ HESAPLAMA
 para=input("anaparayi giriniz(euro):")
 sure=input("faiz suresini yil olarak giriniz:")
 oran=input("faiz oranini giriniz(%):")
@@ -79,7 +79,7 @@ dosya.close()
 print("kayit tamamlandi.")
 
 
-#5
+#5  MASRAF ORANI HESAPLAMA
 gelir=input("aylik gelirinizi giriniz:")
 hmutfak=input("aylik mutfak harcamanizi giriniz:")
 hegitim=input("aylik egitim harcamanizi giriniz:")
@@ -96,7 +96,7 @@ print("aylik masraf:",htoplam,"\n","masraf orani:",oran,file=file,sep="")
 file.close()
 
 
-#6
+#6 PRINT ILE YAZDIRMA
 print("Python’un kurucusu Guido Van Rossum, Hollanda’nin Amsterdam’daki  \"Universiteit Van Amsterdam\" okulundan  1982’de mezun olmuştur.")
 print('Python’un kurucusu Guido Van Rossum, Hollanda’nin Amsterdam’daki  "Universiteit Van Amsterdam" okulundan  1982’de mezun olmuştur.')
 print("""Python’un kurucusu Guido Van Rossum, Hollanda’nin Amsterdam’daki  "Universiteit Van Amsterdam" okulundan  1982’de mezun olmuştur.""")
