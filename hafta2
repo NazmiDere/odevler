@@ -1,4 +1,4 @@
-#1
+#1 BURC TESPITI
 #########################
 print("="*15,"BURC TESPIT SISTEMI","="*15,sep="")
 while True:
@@ -45,7 +45,7 @@ while True:
         print("yanlis giris yaptiniz,tekrak deneyiniz")
 
 
-#2
+#2 MIL-KM DONUSUMU 
 #########################
 while True:
     donusum=input("hangi donusumu yapmak istediginizi yaziniz\n(km-mil,mil-km)(cikamk icin q ya basiniz):")
@@ -70,7 +70,7 @@ while True:
         print("*********************************************")
 
 
-#3
+#3 KULLANICI ADI SIFRE OLUSTURMA
 #########################
 while True:
     kullanici=input("bir kullanici adi olusturun\n(3-18 karakterden olusmalidir ve buyuk harf bulunmamalidir):")
@@ -93,7 +93,7 @@ dosya.close()
 print("bilgileriniz dosyaya kaydedildi")
 
 
-#4
+#4 SAYI TAHMIN OYUNU
 #########################
 deneme=1
 sayi=5
@@ -118,7 +118,7 @@ while True:
             break
 
 
-#5
+#5 HESAP ISLEMLERI
 #########################
 hesap=1000
 while True:
