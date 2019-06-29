@@ -1,0 +1,52 @@
+sayac=0
+rakam="1234567890"
+while True:
+    sayi1=(input("ilk sayiyi giriniz:"))
+    if sayi1=="":
+        print("bos giris yapilamaz")
+        continue
+    for i in sayi1:
+        if i in rakam:
+            sayac+=1
+    if sayac!=len(sayi1):
+        print("sadece sayi giriniz")
+    else:
+        sayac=0
+        break
+while True:
+    sayi2=(input("ikinci sayiyi giriniz:"))
+    if sayi2=="":
+        print("bos giris yapilamaz")
+        continue
+    for i in sayi2:
+        if i in rakam:
+            sayac+=1
+    if sayac!=len(sayi2):
+        print("sadece sayi giriniz")
+    else:
+        sayac=0
+        break
+while True:
+    sayi3=(input("ucuncu sayi giriniz:"))
+    if sayi3=="":
+        print("bos giris yapilamaz")
+        continue
+    for i in sayi3:
+        if i in rakam:
+            sayac+=1
+    if sayac!=len(sayi3):
+        print("sadece sayi giriniz")
+    else:
+        sayac=0
+        break
+if sayi1>sayi2>sayi3 or sayi1>sayi3>sayi2:
+    print("en buyuk sayi:",sayi1)
+elif sayi2>sayi1>sayi3 or sayi2>sayi3>sayi1:
+    print("en buyuk sayi:",sayi2)
+elif sayi3>sayi2>sayi1 or sayi3>sayi1>sayi2:
+    print("en buyuk sayi:",sayi3)
+elif sayi1==sayi2 or sayi2==sayi3 or sayi1==sayi3:
+    print("girdiginiz saylardan ikisi esit\n","*"*50,sep="")
+elif sayi1==sayi2==sayi3:
+    print("sayilar birbirine esit\n","*"*50,sep="")
+        
