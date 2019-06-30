@@ -32,3 +32,56 @@ while True:
     except:
         print("bir hata olustu")
 
+
+#4 ALAN-HACIM HESAPLAMA
+#########################
+print("%"*20,"ALAN VE HACIM HESAPLAMA SISTEMI","%"*20)
+print("""
+asagidaki seceneklerden birini secin:
+    -karenin alani(1)
+    -ucgenin alani(2)
+    -dikdortgenin alani(3)
+    -kupun hacmi(4)
+    -kurenin hacmi(5)
+    -koninin hacmi(6)
+    -cikmak icin q ya basiniz""")
+while True:
+    try:
+        islem=int(input("\nyapmak istediginiz islemi seciniz:"))
+        if islem=="q" or islem=="Q":
+            break
+        elif islem==1:
+            kenar=float(input("\nkarenin bir kenarinin kac birimdir:"))
+            alan=kenar*kenar
+            print("karenin alani",round(alan,2),"birim²dir")
+        elif islem==2:
+            kenar=float(input("\nyuksekligini alacimiz kenarin uzunlugu kac birimdir:"))
+            yukseklik=float(input("bu kenarin yuksekligi kac birimdir:"))
+            alan=(kenar*yukseklik)/2
+            print("ucgenin alani",round(alan,2),"birim²dir")
+        elif islem==3:
+            kenar1=float(input("\ndikdortgenin kenarlarindan birini giriniz:"))
+            kenar2=float(input("dikdortgenin diger kenarini giriniz:"))
+            alan=kenar1*kenar2
+            print("dikdortgenin alani",round(alan,2),"birim²dir")
+        elif islem==4:
+            kenar=float(input("\nkupun bir kenari kac birimdir:"))
+            hacim=kenar**3
+            print("kupun hacmi",round(hacim,2),"birim³dur")
+        elif islem==5:
+            yaricap=float(input("\nkurenin yaricapi kac birimdir:"))
+            pi=3.14
+            hacim=(4/3)*pi*(yaricap**3)
+            print("kurenin hacmi",round(hacim,2),"birim³dur")
+        elif islem==6:
+            yaricap=float(input("\nkoninin yaricapi kac birimdir:"))
+            yukseklik=float(input("koninin yuksekligi nedir:"))
+            pi=3.14
+            hacim=(1/3)*pi*(yaricap**2)*yukseklik
+            print("koninin hacmi",round(hacim,2),"birim³dur")
+        else:
+            print("yanlis giris yaptiniz,tekrar deneyiniz")
+    except ValueError:
+        print("lutfen sayi girisi yapiniz")
+    except:
+        print("bir hata olustu,lutfen tekrar deneyiniz")
