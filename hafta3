@@ -31,3 +31,4 @@ while True:
         print("lutfen sayi giriniz")
     except:
         print("bir hata olustu")
+
