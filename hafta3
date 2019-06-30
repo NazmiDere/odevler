@@ -5,24 +5,27 @@ print("-tahminde bulunmaniz gereken aralik:0-100")
 sayi=16
 deneme=1
 while True:
-    tahmin=int(input("\ntahmininiz:"))
-    if (tahmin>100) or (tahmin<0):
-        print("sayi 0 100 arasindadir")
-        deneme+=1
-    elif tahmin>80:
-        print("tahmin ettigin sayi cok cok yuksek,asagiya inmelisin")
-        deneme+=1
-    elif tahmin>60:
-        print("tahmin ettigin sayi yuksek,asagiya inmelisin")
-        deneme+=1
-    elif tahmin>20:
-        print("daha da asagiya inmelisin")
-        deneme+=1
-    elif tahmin>16:
-        print("cok yaklastin az daha asagi in")
-        deneme+=1
-    elif 0<tahmin<16:
-        print("sayiyi arttirman lazim")
-        deneme+=1
-    else:
-        print("*"*49,"\n","tebrikler ",deneme," tane deneme ile sayiyi buldunuz","\n","*"*49,sep="")
+    try:
+        tahmin=int(input("\ntahmininiz:"))
+        if (tahmin>100) or (tahmin<0):
+            print("sayi 0 100 arasindadir")
+        elif tahmin>80:
+            print("tahmin ettigin sayi cok cok yuksek,asagiya inmelisin")
+            deneme+=1
+        elif tahmin>60:
+            print("tahmin ettigin sayi yuksek,asagiya inmelisin")
+            deneme+=1
+        elif tahmin>20:
+            print("daha da asagiya inmelisin")
+            deneme+=1
+        elif tahmin>16:
+            print("cok yaklastin az daha asagi in")
+            deneme+=1
+        elif 0<tahmin<16:
+            print("sayiyi arttirman lazim")
+            deneme+=1
+        else:
+            print("*"*49,"\n","tebrikler ",deneme," tane deneme ile sayiyi buldunuz","\n","*"*49,sep="")
+            break
+    except ValueError:
+        print("lutfen sayi giriniz")
