@@ -85,3 +85,17 @@ while True:
         print("lutfen sayi girisi yapiniz")
     except:
         print("bir hata olustu,lutfen tekrar deneyiniz")
+
+
+#5 FIZZ BUZZ(3-5-15)
+#########################
+for sayi in range(1,100):
+    if (sayi in range(0,100,3))and(sayi not in range(0,100,5)):
+        print("FIZZ")
+    elif (sayi in range(0,100,5))and(sayi not in range(0,100,3)):
+        print("BUZZ")
+    elif sayi in range (0,100,15):
+        print("FIZZ BUZZ")
+    elif (sayi not in range(0,100,3))and(sayi not in range(0,100,5))and(range(0,100,15)):
+        print(sayi)
+
