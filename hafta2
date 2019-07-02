@@ -137,6 +137,7 @@ while True:
         hesap=hesap-cekme
         if hesap<0:
             print("hesabinizdaki parayi eksiye dusuremezsiniz")
+            hesap=hesap+cekme
         else:
             print("hesabinizda",hesap,"euro kalmistir")
         soru=input("baska bir islem yapmak ister misiniz(e/h):")
