@@ -100,7 +100,7 @@ for sayi in range(1,100):
         print(sayi)
 
 
-#5 ASAL SAYI BULMA SISTEMI
+#6 ASAL SAYI BULMA SISTEMI
 #########################
 print("#"*15,"ASAL SAYI SORGULAMA SISTEMI","#"*15)
 while True:
