@@ -99,3 +99,31 @@ for sayi in range(1,100):
     elif (sayi not in range(0,100,3))and(sayi not in range(0,100,5))and(range(0,100,15)):
         print(sayi)
 
+
+#5 ASAL SAYI BULMA SISTEMI
+#########################
+print("#"*15,"ASAL SAYI SORGULAMA SISTEMI","#"*15)
+while True:
+    sayac=0
+    try:
+        sayi=input("sorgulamak istediginiz sayiyi giriniz(cikmak icin q ya basiniz:")
+        if sayi=="Q" or sayi=="q":
+            break
+        elif int(sayi)<=1:
+            print("2 den kucuk sayilari sorgulayamazsin\n")
+            continue
+        for i in range(2,int(sayi)):
+            if (int(sayi)%i)==0:
+                sayac+=1
+        if sayac>=1:
+            print(sayi,"sayisi asal sayi degildir\n")
+        else:
+            print(sayi,"sayisi asal sayidir\n")
+    except ValueError:
+        print("lutfen bir sayi giriniz\n")
+    except:
+        print("bir hata olustu")
+        
+        
+
+
