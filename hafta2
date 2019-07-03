@@ -78,8 +78,10 @@ while True:
     rakamlar="0123456789"
     if len(kullanici)<3 or len(kullanici)>18:
         print("3-18 karakter arasi bir kullanici adi olusturmalisiniz")
+        continue
     if len(sifre)<6 or len(sifre)>12:
         print("6-12 karakter arasi bir sifre olusturmalisiniz")
+        continue
     for i in kullanici:
         if i in rakamlar:
             print("kullanici adinda rakam bulunamaz")
