@@ -38,7 +38,7 @@ while True:
     elif (ay=="ocak"and 21<=gun<=30)or (ay=="subat"and 1<=gun<=18):
         print("kova burcusunuz")
         break
-    elif (ay=="subat"and 19<=gun<=20)or(ay=="mart"and 1<=gun<=20):
+    elif (ay=="subat"and 19<=gun<=29)or(ay=="mart"and 1<=gun<=20):
         print("balik burcusunuz")
         break
     else:
