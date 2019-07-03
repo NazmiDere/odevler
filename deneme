@@ -49,4 +49,24 @@ elif sayi1==sayi2 or sayi2==sayi3 or sayi1==sayi3:
     print("girdiginiz saylardan ikisi esit\n","*"*50,sep="")
 elif sayi1==sayi2==sayi3:
     print("sayilar birbirine esit\n","*"*50,sep="")
+    
+
+
+
+
+
+
+while True:
+   kullanici=input("bir kullanici adi giriniz(3-12 karakter):")
+   if len(kullanici)<3 or len(kullanici)>12:
+      print("kullanici adi 3-12 karakterden olusmalidir")
+   else:
+      break
+while True:
+   sifre=input("bir parola belirleyiniz(6-18 karakter):")
+   if len(sifre)<6 or len(sifre)>18:
+      print("sifre 6-18 karakterden olusmalidir")
+   else:
+      break
+
         
