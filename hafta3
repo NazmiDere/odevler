@@ -33,6 +33,25 @@ while True:
         print("bir hata olustu")
 
 
+#3 DOSYA AYIRMA 
+#########################
+try:
+    with open("futbolcular.txt","r") as dosya:
+        icerik=dosya.readlines()
+        for i in icerik:
+            if "Fenerbahce" in i:
+                with open("fenerbahce.txt","a+") as fenev:
+                    fenev.writelines(i)
+            elif "Galatasaray" in i:
+                with open("galatasaray.txt","a+") as cimbom:
+                    cimbom.writelines(i)
+            elif "Besiktas" in i:
+                with open("besiktas.txt","a+") as tas8:
+                    tas8.writelines(i)
+except:
+    print("dosya bulunamadi")
+        
+
 #4 ALAN-HACIM HESAPLAMA
 #########################
 print("%"*20,"ALAN VE HACIM HESAPLAMA SISTEMI","%"*20)
