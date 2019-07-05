@@ -1,3 +1,37 @@
+#2 KULLANICI KAYIT SISTEMI
+#######################
+try:
+   a=True
+   while a==True:
+      kullanici=input("bir kullanici adi giriniz(3-12 karakter):")
+      if len(kullanici)<3 or len(kullanici)>12:
+         print("kullanici adi 3-12 karakterden olusmalidir")
+      with open("kayit.txt","a+") as dosya:
+         dosya.seek(0)
+         icerik=dosya.readlines()
+         b=1
+         for i in icerik:
+            b+=1
+            if b%2==0:
+               if kullanici+"\n"==i:
+                  print("kullanici adi zaten mevcut")
+                  break
+               else:
+                  a=False
+      if a==False:
+         break
+   while True:
+      sifre=input("bir parola belirleyiniz(6-18 karakter):")
+      if len(sifre)<6 or len(sifre)>18:
+         print("sifre 6-18 karakterden olusmalidir")
+      else:
+         break
+   with open("kayit.txt","a")as dosya:
+      dosya.write(kullanici+"\n"+sifre+"\n")
+except:
+   print("lutfen tekrar deneyiniz")
+
+
 #2 SAYI TAHMIN OYUNU
 #######################
 print("#"*30,"SAYI TAHMIN OYUNU","#"*30)
