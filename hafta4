@@ -35,3 +35,19 @@ try:
     print(f"\nyazdiklarinizda {sayac} harf, {sayac2} buyuk harf, {sayac3} rakam, {sayac4} karakter var")
 except:
     print("bir hata olustu")
+    
+    
+#3 METINDEKI RAKAMLARI TOPLAMA
+#########################
+try:
+    veri=input("bir metin giriniz:")
+    rakamlar="1234567890"
+    sayac=0
+    for rakam in veri:
+        if rakam in rakamlar:
+            rakam=int(rakam)
+            sayac+=rakam
+    print(sayac)
+except:
+    print("bir hata olustu")
+
