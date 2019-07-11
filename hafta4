@@ -11,7 +11,7 @@ except:
 #2
 #########################
 try:
-    veri=input("buyutmek istediginiz yaziyi girin:")
+    veri=input("bir seyler yaziniz:")
     harfler="qwertyuiopasdfghjklzxcvbnm"
     bharfler="QWERTYUIOPASDFGHJKLZXCVBNM"
     rakamlar="1234567890"
