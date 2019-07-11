@@ -56,15 +56,16 @@ except:
 #########################
 try:
     sesli_harfler="EUIOA"
-    with open("futbolcular.txt","r") as dosya:
-        icerik=dosya.readlines()
-        with open("seslifutbolcular.txt","w") as file:
-            for line in icerik:
-                for harf in line[0]:
-                    if harf in sesli_harfler:
-                            file.write(line)
+    with open("futbolcular.txt","r") as dosya:          #dosyayi aciyoruz
+        icerik=dosya.readlines()                        #icerigi liste olarak okuyoruz
+        with open("seslifutbolcular.txt","w") as file:  #yeni dosyamizi aciyoruz
+            for line in icerik:                         #icerikere tek tek bakiyoruz
+                for harf in line[0]:                    #icerigin ilk harfine bakiyoruz
+                    if harf in sesli_harfler:           #ilk harfin sesliolup olmadigina bakiyoruz
+                        file.write(line)                #eger sesli ise dosyaya yazdiriyoruz 
 except FileNotFoundError:
     print("dosya bulunamadi")
 except:
     print("bir hata olustu, tekrar deneyiniz")
+
 
