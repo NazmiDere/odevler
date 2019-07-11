@@ -1,0 +1,8 @@
+#1
+#########################
+try:
+    veri=input("buyutmek istediginiz yaziyi girin:")
+    veri=veri.upper()
+    print(veri)
+except:
+    print("bir hata olustu")
