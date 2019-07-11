@@ -32,6 +32,6 @@ try:
     for karakter in karakterler:
         sayi4=veri.count(karakter)
         sayac4+=sayi4
-    print(f"yazdiklarinizda {sayac} harf, {sayac2} buyuk harf, {sayac3} rakam, {sayac4} karakter var")
+    print(f"\nyazdiklarinizda {sayac} harf, {sayac2} buyuk harf, {sayac3} rakam, {sayac4} karakter var")
 except:
     print("bir hata olustu")
