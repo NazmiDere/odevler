@@ -1,8 +1,37 @@
-#1
+#1 BUYUK HARFE CEVIRME
 #########################
 try:
     veri=input("buyutmek istediginiz yaziyi girin:")
     veri=veri.upper()
     print(veri)
+except:
+    print("bir hata olustu")
+
+
+#2
+#########################
+try:
+    veri=input("buyutmek istediginiz yaziyi girin:")
+    harfler="qwertyuiopasdfghjklzxcvbnm"
+    bharfler="QWERTYUIOPASDFGHJKLZXCVBNM"
+    rakamlar="1234567890"
+    karakterler="!@#$%^&*<>?\"}{:,./;'[]\|`~=-+_"
+    sayac=0                                 #harfleri saymak icin degisken olusturduk
+    for harf in harfler:                    
+        sayi=veri.count(harf)               #harfleri for ile tek tek sayiyoruz
+        sayac+=sayi                         #saydigimiz harfleri topladik
+    sayac2=0                                #harfler icin yaptigimizi hepsi icin uyguladik
+    for bharf in bharfler:
+        sayi2=veri.count(bharf)
+        sayac2+=sayi2
+    sayac3=0
+    for rakam in rakamlar:
+        sayi3=veri.count(rakam)
+        sayac3+=sayi3
+    sayac4=0
+    for karakter in karakterler:
+        sayi4=veri.count(karakter)
+        sayac4+=sayi4
+    print(f"yazdiklarinizda {sayac} harf, {sayac2} buyuk harf, {sayac3} rakam, {sayac4} karakter var")
 except:
     print("bir hata olustu")
