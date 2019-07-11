@@ -51,3 +51,20 @@ try:
 except:
     print("bir hata olustu")
 
+
+#4 SESLI HARFLI FUTBOLCULAR
+#########################
+try:
+    sesli_harfler="EUIOA"
+    with open("futbolcular.txt","r") as dosya:
+        icerik=dosya.readlines()
+        with open("seslifutbolcular.txt","w") as file:
+            for line in icerik:
+                for harf in line[0]:
+                    if harf in sesli_harfler:
+                            file.write(line)
+except FileNotFoundError:
+    print("dosya bulunamadi")
+except:
+    print("bir hata olustu, tekrar deneyiniz")
+
