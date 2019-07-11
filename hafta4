@@ -69,3 +69,20 @@ except:
     print("bir hata olustu, tekrar deneyiniz")
 
 
+#5
+########################
+try:
+    tr_karakter="şçöğüıŞÇÖĞÜİ"
+    en_karakter="scoguiSCOGUI"
+    karakter=str.maketrans(tr_karakter,en_karakter)                     #tr en karakterleri degistiriyoruz
+    with open("futbolcular.txt","r",encoding="cp1254") as dosya:        #eski dosyayi okuma kipiyle okuyoruz
+        icerik=dosya.read()                                             #icerkleri bi degiskende topluyoruz
+        icerik2=icerik.translate(karakter)                              #tr en degisiklikligini uyguluyoruz
+        with open("futbolcular2.txt","w",encoding="cp1254") as file:    #sonucu yazdirmak icin yeni dosya aciyoruz
+            file.write(icerik2)                                         #metnin son halini yazdiriyoruz
+except FileNotFoundError:
+    print("dosya bulunamadi")
+except:
+    print("bir hata olustu,tekrar deneyiniz")
+
+
