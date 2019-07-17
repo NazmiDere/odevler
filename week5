@@ -1,0 +1,39 @@
+to_do_list=[]
+done=[]
+while True:
+    try:
+        print("""\n\n\n\n\n\nSYSTEM OF TO DO LIST
+        (1)add something
+        (2)delete something
+        (3)send into done list
+        (4)show me done list
+        (5)clear to do list
+        (q)exit\n""")
+        print("to do list:{}".format(to_do_list))
+        process=input("\nwrite number of process which you want to do:")
+        if process=="q":
+            break
+        elif process=="1":
+            insert_tdl=input("\nadd something in to do list:")              #eklenecek ogeyi aldik
+            to_do_list.append(insert_tdl)                                   #to do liste ekledik
+        elif process=="2":
+            del_tdl=input("\ndelete something from to do list:")            #silinecek ogeyi aldik
+            index_del_tdl=to_do_list.index(del_tdl)                         #ogenin indexini bulduk
+            del to_do_list[index_del_tdl]                                   #del ile sildik
+        elif process=="3":
+            to_done=input("\nwhich assignment do you wanna send to done list:")#yollanacak ogeyi aldik
+            index_to_done=to_do_list.index(to_done)                         #ogenin indexini bulduk
+            popped=to_do_list.pop(index_to_done)                            #ogeyi pop metoduyla alip bir degiskene bagladik
+            done.append(popped)                                             #ogeyi done listesine ekledik
+        elif process=="4":
+            print("\ndone list:{}\n".format(done))
+        elif process=="5":
+            print("\ndone list was cleared")
+            to_do_list.clear()
+        else:
+            print("\nplease write number from list\n")
+    except ValueError:
+        print("your input is incorrect,please try again")
+    except:
+        print("something happened wrong,please try again")
+    
