@@ -1,3 +1,5 @@
+#1 TO DO LIST
+#########################
 to_do_list=[]
 done=[]
 while True:
@@ -36,4 +38,140 @@ while True:
         print("your input is incorrect,please try again")
     except:
         print("something happened wrong,please try again")
+
+
+#2 HANGMAN
+#########################
+word_list=["c","o","m","p","u","t","e","r"]                             #belirledigimiz kelimeyi listeledik
+word_table=["_","_","_","_","_","_","_","_"]                            #bos bir liste olusturduk
+turn=6                                                                  #6 defa yanlis girebilmek icin bir degisken olusturduk
+print("*"*15,"WELCOME TO HANGMAN","*"*15)
+while True:
+    try:
+        print("\n","\t".expandtabs(17),"you can try {} more times".format(turn),sep="")#kac deneme hakki kaldigini yazdiriyoruz
+        print("\n\t".expandtabs(20),*word_table)                        #bos listemizi yazdiriyoruz
+        if word_table==word_list:                                       #kazanma kosulu olusturduk,eger iki liste de esitse oyun kazanilmistir
+            print("\n\n\n\tCONGRATULATIONS!".expandtabs(21))
+            break
+        estimation=input("\nplease enter any letter to find word:(to quit, write quit):")#kullanicidan tahmin ettigi harfi aliyoruz
+        estimation=estimation.lower()                                   #tahminleri kucuk harfe ceviriyoruz
+        if estimation.isalpha()!=True:                                  #harf girilip girilmedigini denetliyoruz
+            print("\n\tplease enter any letter".expandtabs(17))         #eger harf girilmezse donguyu basa sariyoruz
+            continue
+        elif len(estimation)>1:                                         #tahminin tek harf olmasi icin kosul olusturduk
+            print("\n\tplease enter only a letter".expandtabs(17))
+            continue
+        elif estimation=="quit":                                        #cikis icin kosul olusturuyoruz
+            break
+        elif estimation in word_list:                                   #tahminin kelime listesinde olup olmadigina bakiyoruz                                 
+            print("correct,your letter is in the word")
+            index=word_list.index(estimation)                           #tahminin kelime listesindeki indexini buluyoruz
+            word_table[index]=estimation                                #bu indexe gore bos listeye harfimizi ekliyoruz
+            if turn==6:                                                 #deneme hakkimiza gore her seferinde durumu gorebilmek icin kosullar olusturduk
+                print("""                                               
+
+
+
+                              
+                                   """)
+            elif turn==5:
+                print("""
+
+
+
+                              
+                              ____""")
+            elif turn==4:
+                print("""
+                                 
+                                |
+                                |
+                                |
+                                |
+                              __|__""")
+            elif turn==3:
+                print("""
+                                 ___
+                                |   
+                                |   
+                                |
+                                |
+                              __|__""")
+            elif turn==2:
+                print("""
+                                 ___
+                                |   |
+                                |   
+                                |  
+                                |
+                              __|__""")
+            elif turn==1:
+                print("""
+                                 ___
+                                |   |
+                                |   O
+                                |       
+                                |    
+                              __|__""")
+        elif estimation not in word_list:                                   #tahmin kelime listesinin icinde degilse durumu gostermek icin kosul olusturduk
+            print("#"*40,"\nyour estimation is not in the word")
+            if turn==6:
+                print("""
+
+
+
+                              
+                              ____""")
+                turn-=1
+            elif turn==5:
+                print("""
+                                |
+                                |
+                                |
+                                |
+                              __|__""")
+                turn-=1
+            elif turn==4:
+                print("""
+                                 ___
+                                |
+                                |
+                                |
+                                |
+                              __|__""")
+                turn-=1
+            elif turn==3:
+                print("""
+                                 ___
+                                |   |
+                                |   
+                                |
+                                |
+                              __|__""")
+                turn-=1
+            elif turn==2:
+                print("""
+                                 ___
+                                |   |
+                                |   O
+                                |  
+                                |
+                              __|__""")
+                turn-=1
+            elif turn==1:
+                print("""
+                                 ___
+                                |   |
+                                |   O
+                                |  /|\     
+                                |  / \     
+                              __|__""")
+                print("\n\t".expandtabs(20),*word_list)                     #oyun bitince kelimenin dogrusunu gosteriyoruz
+                print("\n\n\tyou lose :(".expandtabs(22))                   
+                break
+    except:
+        print("something happened wrong, please try again")
+                    
+        
+
     
