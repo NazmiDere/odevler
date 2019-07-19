@@ -171,7 +171,43 @@ while True:
                 break
     except:
         print("something happened wrong, please try again")
-                    
-        
+
+
+#3 GAME OF NUMBER ESTIMATION
+#########################
+print("*"*15,"GAME OF NUMBER ESTIMATION","*"*15)
+number_list=["2","4","6","8"]                                               #sayiyi belirledik ve liste haline getirdik 
+while True:
+    try:
+        counter1=0                                                          #iki tane degeri sifir olan sayac belirledik
+        counter2=0
+        estimation=input("estimate the number which has four digit:")       #kullanicinin tahminini aldik
+        if (len(estimation)>4 or len(estimation)<4) or (estimation.isalpha!=True):#tahminin 4 karakterli olup olmadigini ve alfabetik
+            print("-------->plese enter number which has four digit\n")     #olup olmadigini denetledik
+            continue
+        estimation=list(estimation)                                         #kullanicidan aldigimiz tahmini lsite haline getirdik
+        if estimation==number_list:                                         #tahminin tamamen dogru olma kosulunu denetledik
+            print("\ncongratulations! your estimate is correct")
+            break
+        if estimation[0]==number_list[0]:                                   #burada rakamin yerinin ve kendisinin dogru olup olamdigini denetledik
+            counter1+=1                                                     #ve bunu her rakam icin uyguladik.sart saglanirsa ilk sayaci
+        if estimation[1]==number_list[1]:                                   #1 arttirdik
+            counter1+=1
+        if estimation[2]==number_list[2]: 
+            counter1+=1
+        if estimation[3]==number_list[3]: 
+            counter1+=1
+        if estimation[0] in number_list and estimation[0]!=number_list[0]:  #burada rakamin dogru ancak yanlis yerde olamsini denetledik
+            counter2-=1                                                     #sart saglanirsa ikinci sayaci 1 azalttik
+        if estimation[1] in number_list and estimation[1]!=number_list[1]:
+            counter2-=1
+        if estimation[2] in number_list and estimation[2]!=number_list[2]:
+            counter2-=1
+        if estimation[3] in number_list and estimation[3]!=number_list[3]:
+            counter2-=1
+        print("\nsituation:",counter1,counter2,"\n\n\n")
+    except:
+        print("something happened wrong,please try again")
+
 
     
