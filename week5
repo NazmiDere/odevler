@@ -210,4 +210,20 @@ while True:
         print("something happened wrong,please try again")
 
 
+#4 LIST COMBINATION
+#########################
+numbers=["1","2","3","4","5","6","7","8","9","10"]  #rakamlari liste haline getirdik
+letters=["a","b","c","d","e","f","g","h","i","j"]   #harfleri liste haline getirdik
+list1=list()                                        #iki yeni bos liste oluturduk
+list2=list()
+for number in numbers:                              #rakamlar listesinin icinde for ile donuyoruz
+    for letter in letters:                          #harfler listesinin icinde for ile donuyoruz
+        combination1=number+letter                  #rakamlarla harfleri birlestiriyoruz
+        combination2=letter+number                  #harflerle rakamlari topluyoruz
+        list1+=[combination1]                       #ve bunlari iki bos listemize ekliyoruz
+        list2+=[combination2]
+print("first list:",list1,"\n")
+print("second list:",list2)
+
+
     
